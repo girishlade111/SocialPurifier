@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M54,0 A54,54 0 1,1 53.9,0 Z"/>
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M54,8 A46,46 0 1,1 53.9,8 Z"/>
+    <!-- Purifier Shield -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M54,26 L76,36 C76,58 54,78 54,78 C54,78 32,58 32,36 Z"/>
+    <!-- Clarity Drop -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,40 C56,47 63,51 63,56 C63,61 59,65 54,65 C49,65 45,61 45,56 C45,51 52,47 54,40 Z"/>
+</vector>

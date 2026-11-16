@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M0,0h108v108h-108z"/>
+    <!-- Outer Focus Glow Circle -->
+    <path
+        android:strokeColor="#0D9488"
+        android:strokeWidth="2"
+        android:pathData="M54,18 A36,36 0 1,1 53.9,18 Z"/>
+    <!-- Purifier Shield -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M54,26 L76,36 C76,58 54,78 54,78 C54,78 32,58 32,36 Z"/>
+    <!-- Inner Spark/Flame of Clarity -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M54,38 C56,46 64,50 64,56 C64,62 59,66 54,66 C49,66 44,62 44,56 C44,50 52,46 54,38 Z"/>
+</vector>

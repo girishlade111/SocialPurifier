@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Focus: Active"
+        android:textColor="@color/accent_green"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp" />
+
+    <Button
+        android:id="@+id/widget_btn_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="Purify"
+        android:background="@color/primary"
+        android:textColor="@color/on_primary"
+        android:textSize="10sp"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

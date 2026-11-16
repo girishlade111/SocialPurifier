@@ -1,0 +1,12 @@
+# Exclude APK binaries and APKs folder
+APKs/
+*.apk
+*.idsig
+
+# Intermediate apktool build artifacts
+build/
+**/build/
+
+# Keystores and sensitive signing keys
+*.keystore
+*.jks

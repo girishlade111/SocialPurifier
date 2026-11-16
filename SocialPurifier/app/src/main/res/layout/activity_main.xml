@@ -1,0 +1,489 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/surface"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/on_background"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LadeStack Engine"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@color/surface_variant"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+    </LinearLayout>
+
+    <!-- Platform Selector Bar -->
+    <HorizontalScrollView
+        android:id="@+id/platform_scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_variant"
+        android:scrollbars="none"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_tab_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/platform_youtube"
+                android:textColor="@color/on_primary"
+                android:background="@color/primary"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_tab_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/platform_instagram"
+                android:textColor="@color/on_surface"
+                android:background="@color/surface"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_tab_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/platform_facebook"
+                android:textColor="@color/on_surface"
+                android:background="@color/surface"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_tab_reddit"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/platform_reddit"
+                android:textColor="@color/on_surface"
+                android:background="@color/surface"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_tab_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/platform_twitter"
+                android:textColor="@color/on_surface"
+                android:background="@color/surface"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Web Container -->
+        <WebView
+            android:id="@+id/purifier_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Settings & Dashboard ScrollView -->
+        <ScrollView
+            android:id="@+id/settings_scroll_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:visibility="gone"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. Permissions Setup Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/surface"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="System Permissions Setup"
+                        android:textColor="@color/primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SocialPurifier requires standard Android accessibility and overlay permissions to block distractions."
+                        android:textColor="@color/text_muted"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Accessibility Service -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_perm_accessibility"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1. Accessibility Blocker"
+                            android:textColor="@color/on_surface"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btn_grant_accessibility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Grant"
+                            android:background="@color/primary"
+                            android:textColor="@color/on_primary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Overlay Permission -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_perm_overlay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2. Display Over Apps"
+                            android:textColor="@color/on_surface"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btn_grant_overlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Grant"
+                            android:background="@color/primary"
+                            android:textColor="@color/on_primary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Usage Access -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_perm_usage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3. Usage Stats Access"
+                            android:textColor="@color/on_surface"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btn_grant_usage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Grant"
+                            android:background="@color/primary"
+                            android:textColor="@color/on_primary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 2. Focus Lock & Hard Mode Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/surface"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/focus_title"
+                        android:textColor="@color/secondary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_focus_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Focus Mode is Inactive"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginTop="6dp" />
+
+                    <Button
+                        android:id="@+id/btn_toggle_focus"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="@string/focus_start"
+                        android:background="@color/secondary"
+                        android:textColor="@color/on_secondary"
+                        android:layout_marginTop="12dp" />
+
+                    <Switch
+                        android:id="@+id/switch_hard_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hard_mode_title"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+
+                <!-- 3. Granular Purifier Controls Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/surface"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Platform Purifier Controls"
+                        android:textColor="@color/accent_green"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- YouTube -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YouTube"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp" />
+
+                    <Switch
+                        android:id="@+id/switch_yt_shorts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block YouTube Shorts"
+                        android:textColor="@color/on_surface"
+                        android:checked="true" />
+
+                    <Switch
+                        android:id="@+id/switch_yt_feed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Home Recommendations Feed"
+                        android:textColor="@color/on_surface" />
+
+                    <Switch
+                        android:id="@+id/switch_yt_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Comments Section"
+                        android:textColor="@color/on_surface" />
+
+                    <!-- Instagram -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Instagram"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp" />
+
+                    <Switch
+                        android:id="@+id/switch_ig_reels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block In-App Reels"
+                        android:textColor="@color/on_surface"
+                        android:checked="true" />
+
+                    <Switch
+                        android:id="@+id/switch_ig_explore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Explore Grid"
+                        android:textColor="@color/on_surface"
+                        android:checked="true" />
+
+                    <Switch
+                        android:id="@+id/switch_ig_feed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Home Feed"
+                        android:textColor="@color/on_surface" />
+
+                    <Switch
+                        android:id="@+id/switch_ig_dm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Direct Messages (DMs)"
+                        android:textColor="@color/on_surface" />
+
+                    <!-- Other Platforms -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Facebook / Reddit / Twitter"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp" />
+
+                    <Switch
+                        android:id="@+id/switch_fb_reels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Facebook Reels"
+                        android:textColor="@color/on_surface"
+                        android:checked="true" />
+
+                    <Switch
+                        android:id="@+id/switch_twitter_trends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Block Twitter Trends &amp; For You"
+                        android:textColor="@color/on_surface"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <!-- 4. Stats & Streaks Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/surface"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Digital Wellbeing Stats"
+                        android:textColor="@color/on_background"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_stats_time_saved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Purified Today: 75 mins"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/tv_stats_streak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Focus Streak: 7 Days"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 5. About & Owner Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/surface"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SocialPurifier"
+                        android:textColor="@color/on_background"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brand: LadeStack\nOwner &amp; Architect: Girish Lade\nVersion: 1.0.0 (Release)\nAll Features Unlocked."
+                        android:textColor="@color/text_muted"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/surface"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/nav_btn_purifier"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/nav_purifier"
+            android:textColor="@color/primary"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/nav_btn_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/nav_settings"
+            android:textColor="@color/on_surface"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

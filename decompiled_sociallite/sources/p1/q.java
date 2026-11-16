@@ -1,0 +1,32 @@
+package p1;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class q extends kotlin.jvm.internal.m implements hf.c {
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    public final /* synthetic */ int f16460t;
+
+    /* JADX INFO: renamed from: u, reason: collision with root package name */
+    public final /* synthetic */ r f16461u;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public /* synthetic */ q(r rVar, int i2) {
+        super(1);
+        this.f16460t = i2;
+        this.f16461u = rVar;
+    }
+
+    @Override // hf.c
+    public final Object invoke(Object obj) {
+        switch (this.f16460t) {
+            case 0:
+                double dDoubleValue = ((Number) obj).doubleValue();
+                r rVar = this.f16461u;
+                return Double.valueOf(rVar.f16472n.d(u8.l.h(dDoubleValue, rVar.f16464e, rVar.f16465f)));
+            default:
+                double dDoubleValue2 = ((Number) obj).doubleValue();
+                r rVar2 = this.f16461u;
+                return Double.valueOf(u8.l.h(rVar2.f16470k.d(dDoubleValue2), rVar2.f16464e, rVar2.f16465f));
+        }
+    }
+}

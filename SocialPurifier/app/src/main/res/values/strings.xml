@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">SocialPurifier</string>
+    <string name="brand_name">LadeStack</string>
+    <string name="owner_name">Girish Lade</string>
+    <string name="tagline">Pure Focus. Zero Distraction.</string>
+
+    <!-- Navigation -->
+    <string name="nav_purifier">Purifier</string>
+    <string name="nav_focus">Focus Mode</string>
+    <string name="nav_blocker">App Blocker</string>
+    <string name="nav_stats">Stats &amp; Streaks</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Purifier Web Platforms -->
+    <string name="platform_youtube">YouTube Pure</string>
+    <string name="platform_instagram">Instagram Pure</string>
+    <string name="platform_facebook">Facebook Pure</string>
+    <string name="platform_reddit">Reddit Pure</string>
+    <string name="platform_twitter">X / Twitter Pure</string>
+
+    <!-- Focus Lock -->
+    <string name="focus_title">Focus Lock</string>
+    <string name="focus_start">Start Focus Session</string>
+    <string name="focus_stop">End Session</string>
+    <string name="focus_active">Focus Mode Active</string>
+    <string name="hard_mode_title">Hard Mode (Anti-Cancel)</string>
+    <string name="hard_mode_desc">Prevents canceling until the countdown reaches zero.</string>
+
+    <!-- App Blocker -->
+    <string name="blocker_title">Purifier App Blocker</string>
+    <string name="blocker_enable">Enable App Blocker</string>
+    <string name="block_reels_title">Block In-App Reels &amp; Shorts</string>
+    <string name="block_reels_desc">Automatically dismisses addictive short video feeds.</string>
+
+    <!-- Overlay & Alerts -->
+    <string name="overlay_blocked_title">Stay Focused</string>
+    <string name="overlay_blocked_desc">This app is currently purified by SocialPurifier.</string>
+    <string name="overlay_return_home">Return to Home</string>
+
+    <!-- Stats -->
+    <string name="stats_time_saved">Time Purified Today</string>
+    <string name="stats_streak">Day Streak</string>
+    <string name="stats_level">Focus Master</string>
+
+    <!-- Accessibility & VPN descriptions -->
+    <string name="accessibility_service_label">SocialPurifier Blocker Service</string>
+    <string name="accessibility_service_description">SocialPurifier monitors foreground applications to block specified distraction apps and in-app short videos, helping you maintain digital wellbeing.</string>
+    <string name="vpn_service_label">SocialPurifier DNS Filter</string>
+</resources>

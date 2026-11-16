@@ -1,0 +1,44 @@
+package androidx.credentials.internal;
+
+import android.content.Context;
+import android.graphics.drawable.Icon;
+import android.os.Bundle;
+import androidx.credentials.CreateCredentialRequest;
+import androidx.credentials.CreatePasswordRequest;
+import androidx.credentials.CreatePublicKeyCredentialRequest;
+import androidx.credentials.R;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class FrameworkImplHelper {
+    public static final Companion Companion = new Companion(null);
+
+    public static final Bundle getFinalCreateCredentialData(CreateCredentialRequest createCredentialRequest, Context context) {
+        return Companion.getFinalCreateCredentialData(createCredentialRequest, context);
+    }
+
+    public static final class Companion {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        public final Bundle getFinalCreateCredentialData(CreateCredentialRequest createCredentialRequest, Context context) {
+            int i2;
+            createCredentialRequest.getClass();
+            context.getClass();
+            Bundle credentialData = createCredentialRequest.getCredentialData();
+            Bundle bundle = createCredentialRequest.getDisplayInfo().toBundle();
+            if (createCredentialRequest instanceof CreatePasswordRequest) {
+                i2 = R.drawable.ic_password;
+            } else {
+                i2 = createCredentialRequest instanceof CreatePublicKeyCredentialRequest ? R.drawable.ic_passkey : R.drawable.ic_other_sign_in;
+            }
+            bundle.putParcelable(CreateCredentialRequest.DisplayInfo.BUNDLE_KEY_CREDENTIAL_TYPE_ICON, Icon.createWithResource(context, i2));
+            credentialData.putBundle(CreateCredentialRequest.DisplayInfo.BUNDLE_KEY_REQUEST_DISPLAY_INFO, bundle);
+            return credentialData;
+        }
+
+        private Companion() {
+        }
+    }
+}
