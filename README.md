@@ -2,6 +2,8 @@
 
 Privacy-first, offline content purifier and social media distraction blocker for Android.
 
+[Download SocialPurifier APK (v3.0.5)](https://github.com/girishlade111/SocialPurifier/releases/latest/download/SocialPurifier.apk) | [View All Releases](https://github.com/girishlade111/SocialPurifier/releases)
+
 SocialPurifier is an open-source Android application engineered to reclaim attention and break addictive algorithmic loops. By filtering reels, shorts, and doom-scrolling feeds at the system layer, SocialPurifier empowers users to stay focused without sacrificing access to essential messaging and communication tools.
 
 ---
